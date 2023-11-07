@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+
+}
+body{
+    color: white;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, 0.981);
+}
+#background{
+   object-fit: fill;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    filter: brightness(13%);
+}
+
+
+#bookingHistory{
+
+    width: 800px;
+    position: absolute;
+    left: 350px;
+   top: 70px;
+    height: 600px; 
+border-radius: 10px;
+border: 0.4px solid white;
+   overflow: scroll;
+   overflow-x: hidden;
+   
+padding: 10px;
+
+}
+
+#bookingHistory div{
+    color: white;
+
+    margin: 10px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.654);
+    border-radius: 10px;
+   
+    box-shadow: rgba(213, 56, 24, 0.4) 0px 5px, rgba(213, 56, 24, 0.4) 0px 10px, rgb(213, 56, 24, 0.4) 0px 5px, rgba(240, 46, 170, 0.1) 0px 5px, rgba(240, 46, 170, 0.05) 0px 15px;
+}
+
+
+
+#bookingHistory::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  #bookingHistory::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.871);
+  }
+   
+  #bookingHistory::-webkit-scrollbar-thumb {
+    background-color: rgba(148, 0, 0, 0.823);
+    outline: 1px solid rgb(28, 32, 36);
+  }
+
+
+#back{
+  position: relative;
+  top: 700px;
+  left: 680px;
+  border-radius: 10px;
+  background-color: rgba(183, 10, 10, 0.936);
+  width: 130px;
+  height: 30px;
+}

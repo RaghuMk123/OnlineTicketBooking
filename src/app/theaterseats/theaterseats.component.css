@@ -1,0 +1,162 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    height: 100vh;
+}
+
+#background{
+    object-fit: fill;
+     position: absolute;
+     width: 100%;
+     height: 100vh;
+     filter: brightness(30%);
+ }
+
+#details
+{
+    background-color: black;
+    border: 1px solid snow;
+    border-radius: 15px;
+    top: 2px;
+    left: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:center ;
+    color: white;
+    width: 1000px;
+    height: 300px;
+}
+
+
+#form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#time{
+ font-size: 20px;
+ margin-left: 8px;
+ margin-right: 8px;
+
+}
+button{
+    width: 140px;
+    height: 30px;
+    position: relative;
+    background-color: red;
+    border-radius: 8px;
+    font-weight: bolder;
+    left: 45%;
+    margin-top: 4px;
+    border: none;
+ 
+}
+
+
+
+button:hover{
+    color: white;
+    width: 150px;
+    height: 40px;
+
+
+}
+
+#seatbox::-webkit-scrollbar {
+    display: none;
+  }
+#seatbox{
+    position: relative;
+    width: 1450px;
+    height: 350px;
+    overflow: scroll;
+    top: 50px;
+    left: 40px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.644);
+}
+#seats{
+    display: inline-flex;
+
+}
+
+#seat{
+    cursor: pointer;
+    margin: 8px;
+    width: 28px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 8px;
+    background-color: rgb(129, 0, 0);
+}
+#seat p{
+    font-size: 15px;
+}
+
+#selectedseats{
+    color: white;
+    margin-left: 4px;
+}
+
+#timebtn{
+    position: relative;
+    left: 19px;
+    display: inline;
+}
+
+#home{
+    position: relative;
+    left: 37px;
+}
+
+#finalbtn{
+
+    top: 50px;
+}
+
+#bookingconfirm
+{
+    position:absolute;
+    left: 450px;
+    top: 200px;
+    width: 500px;
+    height: 200px;
+    background-color: rgb(22, 22, 22);
+    color: white;
+    border-radius: 10px;
+
+}
+#bookingconfirm h1
+{
+    position: relative;
+    top: 20px;
+    left: 80px;
+}
+#bookingconfirm h2
+{
+    position: relative;
+    top: 40px;
+    left: 80px;
+}
+#hmbtn{
+    position: relative;
+    top: 40px;
+    left: 190px;
+    width: 120px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+
+input[type=date]
+{
+    border-radius: 10px;
+}

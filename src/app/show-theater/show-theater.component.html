@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body *ngIf="showTheater">
+
+    <img src={{authObject.selectedMovie.movieBackgroudImage}} id="background">
+    <h1>Choose  the  Theater</h1>
+    <div id="box">
+        <div *ngFor="let theater of movieTheaters" id="displayTheater">
+
+            <div>
+                <h1>{{theater.theaterName}}</h1>
+                <p>Adress: {{theater.threaterAdress}}</p>
+                <p>Price: {{theater.price}}</p>
+    
+                    <button (click)="selectTheater(theater)" id="btn">Book</button>
+            </div>
+    
+        </div>
+
+    </div>
+    <div *ngIf="showTheater"  id="home">
+        <button  (click)="routeBack()" id="back">Home</button>
+        </div>
+</body>
+
+<div *ngIf="!showTheater"  id="noTheater">
+    <h1>No theater in your location</h1>
+    <button  (click)="routeBack()" id="back">Home</button>
+
+</div>
+</html>

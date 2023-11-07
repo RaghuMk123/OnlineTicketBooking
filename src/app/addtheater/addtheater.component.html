@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="logo">
+        <h1>GMOVIES</h1>
+    </div>
+
+
+    <div id="formDiv" *ngIf="visibility">
+        <h2>Sign Up</h2>
+        <form #addTheater="ngForm" (ngSubmit)="RegisterTheater(addTheater.value)">
+            <div>
+                <p>TheaterName</p>
+                <input type="text" class="input" name="theaterName" id="theaterName" ngModel>
+            </div>
+            <div>
+                <p>theaterCity</p>
+                <select name="theaterCity" id="theaterCity"  ngModel>  
+                    <option *ngFor="let item of city" value="{{item.name}}">{{item.name}}</option>
+                </select>
+                
+            </div>
+            <div>
+                <p>Theater Address</p>
+                <input type="text" class="input" name="threaterAdress" id="threaterAdress" ngModel>
+            </div>
+            <div>
+                <p>Movie</p>
+                <select name="movieId" id="movieId" ngModel>
+                    <option *ngFor="let item of movies" value="{{item.movieId}}">{{item.movieName}}</option>
+                </select>
+            </div>
+            <div>
+                <p>Show Timing</p>
+                <select name="time1" class="timing" ngModel>
+                    <option *ngFor="let item of time" value="{{item.time}}">{{item.time}}</option>
+                </select>
+                <select name="time2" class="timing" ngModel>
+                    <option *ngFor="let item of time" value="{{item.time}}">{{item.time}}</option>
+                </select>
+                <select name="time3"  class="timing" ngModel>
+                    <option *ngFor="let item of time" value="{{item.time}}">{{item.time}}</option>
+                </select>
+                
+            </div>
+
+            <div>
+                <p>Number of Seats</p>
+                <input type="number" class="input" name="theaterSeats" id="theaterSeats" ngModel>
+            </div>
+            <div>
+                <p>Price</p>
+                <input type="number" class="input" name="price" id="theaterSeats" ngModel>
+            </div>
+
+            <div>
+                <button class="input">Register</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div *ngIf="!visibility" id="afterRegister">
+        <div id="routeBack">
+            <h2>Registered Successfully</h2>
+            <p>Thank You</p>
+            <button (click)="routeBack()">Click Here</button>
+        </div>
+
+    </div>
+</body>
+</html>

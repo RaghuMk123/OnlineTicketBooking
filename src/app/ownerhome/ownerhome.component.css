@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+
+}
+body{
+    color: white;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, 0.981);
+}
+#background{
+   object-fit: fill;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    filter: brightness(13%);
+}
+
+#details div
+{
+    margin: 20px;
+}
+#details
+{ 
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#Maintheaterbox{
+    overflow: scroll;
+    height: 500px;
+    overflow-x: hidden;
+}
+
+
+#Maintheaterbox::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  #Maintheaterbox::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.871);
+  }
+   
+  #Maintheaterbox::-webkit-scrollbar-thumb {
+    background-color: rgba(148, 0, 0, 0.823);
+    outline: 1px solid rgb(28, 32, 36);
+  }
+#theaterbox{
+   
+    position: relative;
+    background-color: rgba(1, 1, 1, 0.652);
+    top: 30px;
+    
+    border-radius: 10px;
+    color: white;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 150px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.6);
+}
+#theaterbox button{
+    width: 140px;
+    height: 30px;
+    color: rgb(5, 5, 5);
+    background-color: rgb(209, 0, 0);
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+
+}
+
+#addbtn
+{
+    width: 140px;
+    height: 35px;
+    color: black;
+    background-color: rgb(194, 2, 2);
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}

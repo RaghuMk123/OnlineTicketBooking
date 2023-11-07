@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./backgroud.png" alt="" id="background">
+
+    <div id="details">
+        <div   id="moviename">
+            <h1>{{currentMovie[0].movieName}}</h1>
+        </div>
+       
+        <div id="time1">
+           <h4>{{TimeAndSeats[0].time}}</h4>
+           <h6>Available Seats: {{TimeAndSeats[0].currentSeats}}</h6>
+          <form #time1="ngForm" (ngSubmit)="changeSeat(time1.value,TimeAndSeats[0].time)">
+            <input type="number" name="seat" id="seat" ngModel>
+            <button>Update</button>
+        </form>
+        </div>
+        <div id="time2">
+            <h4>{{TimeAndSeats[1].time}}</h4>
+            <h6>Available Seats: {{TimeAndSeats[1].currentSeats}}</h6>
+           <form #time2="ngForm" (ngSubmit)="changeSeat(time2.value,TimeAndSeats[1].time)">
+             <input type="number" name="seat" id="seat" ngModel>
+             <button>Update</button>
+         </form>
+         </div>
+         <div id="time3">
+            <h4>{{TimeAndSeats[2].time}}</h4>
+            <h6>Available Seats: {{TimeAndSeats[2].currentSeats}}</h6>
+           <form #time3="ngForm" (ngSubmit)="changeSeat(time3.value,TimeAndSeats[2].time)">
+             <input type="number" name="seat" id="seat" ngModel>
+             <button>Update</button>
+         </form>
+         </div>
+       
+           <button  (click)="routeBack()">Home Page</button>
+   
+    </div>
+
+</body>
+</html>
+

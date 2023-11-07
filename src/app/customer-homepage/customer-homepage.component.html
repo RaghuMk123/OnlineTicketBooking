@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+  
+
+
+   
+  <div id="Silder"  *ngIf="!bookingVisibility">
+
+     
+  </div>
+ <img src="./backgroud.png" alt="" *ngIf="bookingVisibility" id="background">
+  <div id="history">
+    <button  class="historybtn" *ngIf="!bookingVisibility" (click)="history()">Booking History</button>
+    <button class="historybtn" *ngIf="bookingVisibility" (click)="home()">Home</button>
+    <button   class="historybtn"  (click)="logout()"  *ngIf="!bookingVisibility" >Logout</button>
+  </div>
+  
+    <h2  *ngIf="!bookingVisibility">Action Movies</h2>
+    <div class="List"  *ngIf="!bookingVisibility">
+        <div *ngFor="let movie of moviesAction" class="movieBox">
+            <img src={{movie.movieImageLink}} alt="" (click)="movieSelect(movie)">
+            
+            
+
+        </div>
+
+    </div>
+
+    <h2  *ngIf="!bookingVisibility">Thriller Movies</h2>
+    <div class="List"  *ngIf="!bookingVisibility">
+        <div *ngFor="let movie of moviesThriller" class="movieBox">
+            <img src={{movie.movieImageLink}} alt="" (click)="movieSelect(movie)">
+            
+            
+
+        </div>
+
+    </div>
+
+    <h2  *ngIf="!bookingVisibility">Adventure Movies</h2>
+    <div class="List" *ngIf="!bookingVisibility">
+        <div *ngFor="let movie of moviesAdventure" class="movieBox">
+            <img src={{movie.movieImageLink}} alt="" (click)="movieSelect(movie)">
+            
+            
+
+        </div>
+
+    </div>
+
+
+    <h2 *ngIf="!bookingVisibility">Romantic Movies</h2>
+    <div class="List"  *ngIf="!bookingVisibility">
+        <div *ngFor="let movie of moviesRomantic" class="movieBox">
+            <img src={{movie.movieImageLink}} alt="" (click)="movieSelect(movie)">
+            
+            
+
+        </div>
+
+    </div>
+
+<div id="blackBox">
+    <div id="bookingHistory" *ngIf="bookingVisibility">
+        <div *ngFor="let items of bookingDetails">
+            <h4>Movie: {{items.movieName}}</h4>
+            <h5>Theater: {{items.theaterName}}</h5>
+            <h6>Date:  {{items.bookedDate}}</h6>
+            <h6>Seats: {{items.seats}}</h6>
+        </div>
+
+
+    </div>
+
+</div>
+  
+
+
+
+
+
+</body>
+
+</html>

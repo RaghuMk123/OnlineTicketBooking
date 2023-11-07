@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="mainDiv">
+
+        <div id="left">
+
+            <div id="leftFirstDiv">
+                
+                <h1>Welcom to GMovie Ticket Booking</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eum, consequatur quis veritatis
+                    fugit illum ex voluptate quos architecto iusto vero asperiores eligendi libero perspiciatis
+                    praesentium animi aspernatur. Quos, ad!</p>
+
+                <div id="registerOption">
+                    <h2>SignUp as </h2>
+                    <button (click)="navigateCustomerRegistration()">Customer</button>
+                    <button (click)="navigateOwnerRegistration()">Host</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="right">
+
+
+            <div id="formDiv">
+                <h1>Login</h1>
+                <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+                    <div>
+                        <p>Username</p>
+                        <input type="text" name="userName" id="userName" ngModel>
+                    </div>
+                    <div>
+                        <p>Password</p>
+                        <input type="password" name="userPassword" id="password" ngModel>
+                    </div>
+                    <div id="roles">
+
+                        Customer<input type="radio" name="role" id="role" value="c" ngModel>
+
+                        Host<input type="radio" name="role" id="role" value="h" ngModel>
+
+                    </div>
+
+                    <div>
+
+                        <Button>Login</Button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

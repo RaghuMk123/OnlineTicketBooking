@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <img src="./backgroud.png" alt="" id="background">
+  
+    <div>
+        <button  (click)="routeBack()"  id="back">Home</button>
+    </div>
+    <div id="blackBox">
+        <div id="bookingHistory">
+            <div *ngFor="let items of bookingDetails">
+                <h3>{{items.bookingId}}</h3>
+                <h4>Movie:{{items.movieName}}</h4>
+                <h6>Date:{{items.bookedDate}}</h6>
+                <h6>Seats:{{items.seats}}</h6>
+                <h6>Price: {{items.price}}</h6>
+                <h6>UserName:{{items.userFullname}}</h6>
+                <h6>Contact:{{items.userPhone}}</h6>
+            </div>
+    
+    
+        </div>
+    
+    </div>
+      
+
+
+
+
+
+</body>
+</html>

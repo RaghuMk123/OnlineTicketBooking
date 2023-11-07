@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <img src={{authObject.selectedMovie.movieBackgroudImage}} id="background">
+
+    <div *ngIf="showLocationVar" id="Location">
+        <h1>Choose Location</h1>
+
+        <form #form="ngForm" (ngSubmit)="chooseLocation(form.value)">
+            <select name="Location" ngModel >
+                <option value={{city.name}}  *ngFor="let city of cities">{{city.name}}</option>
+            </select>
+            <button>Choose</button>
+        </form>
+    </div>
+
+
+    <div *ngIf="!showLocationVar">
+        <div id="sideImage">
+            <img src={{authObject.selectedMovie.movieImageLink}}>
+        </div>
+        <div id="desc">
+            <h1>{{authObject.selectedMovie.movieName | uppercase}}</h1>
+
+            <p>{{authObject.selectedMovie.movieDesc}}</p>
+        </div>
+        <div id="buttons">
+            <div>
+                <a href={{authObject.selectedMovie.movieTrailerLink}}><button id="trailerBtn"><i
+                            class="fa-solid fa-play"></i> Trailer</button></a>
+            </div>
+            <div>
+                <button (click)="showLocation()"><i class="fa-solid fa-ticket"></i> Book Ticket</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

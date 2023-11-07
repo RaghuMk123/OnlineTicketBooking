@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="{{currentMovie[0].movieBackgroudImage}}" alt="" id="background">
+    <div id="detail">
+     
+    
+        <div id="sideImage">
+            <img src={{currentMovie[0].movieImageLink}}>
+        </div>
+        <div id="desc">
+            <h1>{{currentMovie[0].movieName |uppercase}}</h1>
+        </div>
+ 
+        <div id="updateform">
+
+            <form #movie="ngForm">
+                <div>
+                    <h3>Select the Movie</h3>
+                    <select name="movieId" id="movieId" ngModel>
+                        <option *ngFor="let item of movies" value="{{item.movieId}}"
+                            title="Number of  available seat reset!!!">{{item.movieName}}</option>
+                    </select>
+                </div>
+
+                <div id="newtime">
+                    <h5>Add New Timing</h5>
+                    <select name="time1" class="timing" ngModel>
+                        <option *ngFor="let item of time" value="{{item.time}}">{{item.time}}</option>
+                    </select>
+                    <select name="time2" class="timing" ngModel>
+                        <option *ngFor="let item of time" value="{{item.time}}">{{item.time}}</option>
+                    </select>
+                    <select name="time3" class="timing" ngModel>
+                        <option *ngFor="let item of time" value="{{item.time}}">{{item.time}}</option>
+                    </select>
+                </div>
+                <button (click)="changeMovie(movie.value)">Update</button>
+            </form>
+            
+
+        </div>
+        <button (click)="routeBack()" id="home">Home Page</button>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

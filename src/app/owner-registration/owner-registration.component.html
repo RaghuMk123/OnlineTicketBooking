@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="logo">
+        <h1>GMOVIES</h1>
+    </div>
+
+
+    <div id="formDiv" *ngIf="visibility">
+        <h2>Sign Up</h2>
+        <form #customerRegisterationForm="ngForm" (ngSubmit)="RegisterCustomer(customerRegisterationForm.value)">
+            <div>
+                <p>UserName</p>
+                <input type="text" class="input" name="ownerUserName" id="userName" ngModel>
+            </div>
+            <div>
+                <p>Password</p>
+                <input type="password" class="input" name="ownerPassword" id="userPassword" ngModel>
+            </div>
+            <div>
+                <p>Name</p>
+                <input type="text" class="input" name="ownerName" id="userFullName" ngModel>
+            </div>
+            <div>
+                <p>Mail</p>
+                <input type="email" class="input" name="ownerGmail" id="userMail" ngModel>
+            </div>
+            <div>
+                <p>PhoneNumber</p>
+                <input type="text" class="input" name="ownerPhoneNumber" id="userPhoneNumber" ngModel>
+            </div>
+
+            <div>
+                <button class="input">Register</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div *ngIf="!visibility" id="afterRegister">
+        <div id="routeBack">
+            <h2>Registered Successfully</h2>
+            <p>Please Log In again</p>
+            <button (click)="routeBackLogin()">Login</button>
+        </div>
+
+    </div>
+</body>
+</html>

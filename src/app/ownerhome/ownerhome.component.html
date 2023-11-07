@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="./backgroud.png" alt="" id="background">
+    <div id="details">
+        <div>
+            <h1 style="color:red; font-weight:bolder">Welcome {{this.ownerServObject.owner.ownerName|uppercase}}</h1>
+
+        </div>
+        <h2>Theaters</h2>
+        <div id="Maintheaterbox" *ngIf="visibilityTheater">
+            <div *ngFor="let theater of Theaters" id="theaterbox">
+
+                <h3>{{theater.theaterName}}</h3>
+                <div id="btn">
+                    <button (click)="editTheater(theater)">Available Seat</button>
+                    <button (click)="editMovie(theater)">Change Movie</button>
+                    <button (click)="editTheaterDetails(theater)">Theater Detail</button>
+                    <button (click)="bookingDetails(theater)">Booking Detail</button>
+                    <button (click)="deleteTheater(theater)">Remove Theater</button>
+    
+                </div>
+              
+
+
+            </div>
+
+        </div>
+        <button id="addbtn"  (click)="navigateAddTheater()">Add Theaters</button>
+
+
+
+    </div>
+
+</body>
+
+</html>

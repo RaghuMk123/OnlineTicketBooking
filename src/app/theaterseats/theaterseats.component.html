@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <img src={{authObject.selectedMovie.movieBackgroudImage}} id="background">
+
+    <div id="details" *ngIf="!bookingFlag">
+        <h1>{{authObject.userSelectedTheater.theaterName}}</h1>
+        <br>
+        <h3>Timings</h3>
+        <br>
+        <form #form="ngForm" id="form"  (ngSubmit)="selectedTime(form.value)">
+            <div *ngFor="let  time of  timing" id="time">
+                {{time.time}} <input type="radio" name="time" value="{{time.time}}" ngModel>
+            </div>
+            <div>
+            Date <input type="date" name="date" ngModel>
+            </div>
+
+            <button id="timebtn">Submit</button>
+            <button (click)="homePage()" id="home">Home Page</button>
+        </form>
+
+
+        <p style="color:white ;" *ngIf="seatsVisibility">Selected Seats</p>
+        <div>
+
+            <span *ngFor="let selected of selectedSeats" id="selectedseats">{{selected}}</span>
+        </div>
+
+    </div>
+
+    <div id="bookingconfirm" *ngIf="bookingFlag">
+        <h1>Booking confirmed</h1>
+        <h2>Amount: {{amount}}</h2>
+        <button (click)="homePage()" id="hmbtn" >Home Page</button>
+    </div>
+
+
+    <div id="seatbox" *ngIf="seatsVisibility" >
+
+        <form #seatForm="ngForm">
+
+            <div *ngFor="let seat of numbersSeats" id="seats">
+
+                <div id="seat" (click)="seatClick(seat)">
+                    <p>{{seat}}</p>
+                </div>
+
+            </div>
+
+
+        </form>
+
+    </div>
+    <button id="finalbtn" *ngIf="seatsVisibility"  (click)="Book()" >Submit</button>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    color: white;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, 0.98);
+}
+#background{
+   object-fit: fill;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    filter: brightness(30%);
+}
+i{
+    margin-right: 7px;
+}
+#sideImage img{
+    position: relative;
+    top: 160px;
+    left: 1250px;
+    width: 250px;
+    height: 350px;
+    box-shadow: 8px 8px 4px rgba(88, 88, 88, 0.328);
+}
+#desc
+{
+    margin-left: 40px;
+    width: 50%;
+}
+#desc p{
+position: relative;
+text-overflow: ellipsis;
+font-size: 20px;
+top: -90px;
+}
+
+#desc h1{
+    position: relative;
+    top: -120px;
+
+}
+#buttons
+{
+    display: flex;
+    position: absolute;
+    left: 30px;
+    
+}
+
+
+#trailerBtn
+{
+    background-color: rgb(239, 239, 5);
+}
+button{
+    margin-left: 20px;
+    width: 150px;
+    height: 50px;
+    font-weight: bolder;
+    border-radius: 18px;
+}
+
+button:hover{
+    width: 160px;
+    height:59px ;
+    box-shadow: 6px 6px 4px rgba(255, 255, 255, 0.612);
+  
+}
+
+#Location{
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    top: 200px;
+    left: 650px;
+    display: flex;
+    opacity: 0.8;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.98);
+}
+
+#Location h1
+{
+    color: red;
+    position: relative;
+    left: 20px;
+}
+
+select{
+width: 140px;
+height: 40px;
+border-radius: 10px;
+}
+    
